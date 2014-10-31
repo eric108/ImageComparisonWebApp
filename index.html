@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Image Comparison</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/console.css">
+        <script src="js/main.js"></script>
+        <script src="js/service.js"></script>
+
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <img src="img/walmartlabs-logo.jpg" alt="walmartlabs logo" style="width:250px;height:50px">
+        <!-- Add your site or application content here -->
+        <h1 id="wholeTitle">Primary Images Comparison</h1>
+        <div id="leftInputBox">
+            <p>Please provide input of productId(WPID) and PARTNER_ORIGINAL_BASE_UPC(POBU) as
+            <p>WPID1  POBU1</p>
+            <p>WPID2  POBU2</p>
+            <div class="omit">.</div>
+            <div class="omit">.</div>
+            <div class="omit">.</div>
+            <div class="omit">.</div>
+
+        </div>
+        <div id="rightInputBox">
+            <textarea id="inputText" rows="30" cols="30" onfocus="clearContents(this);">eg.
+6HXANLDXRWSY  0007430000421
+76TEQ96G9DK4  MP10000408093
+            </textarea><br>
+            <textarea id="sizePerPage">Optional: Provide page size here, default value is 25</textarea>
+            <button id="submit" onclick="goToResult()">Submit</button>
+        </div>
+
+        <div id="resultPage"></div>
+
+
+    </body>
+</html>

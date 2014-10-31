@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="js/service.js"></script>
+
+</head>
+<body>
+
+<p>Click the button to display the array values after the split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+
+<script>
+
+    function myFunction () {
+
+        var A = [['n','sqrt(n)']];  // initialize array of rows with header row as 1st item
+
+        for(var j=1;j<10;++j){ A.push([j, Math.sqrt(j)]) }
+
+        var csvRows = [];
+        for(var i=0,l=A.length; i<l; ++i){
+            csvRows.push(A[i].join(','));   // unquoted CSV row
+        }
+        var csvString = csvRows.join("\r\n");
+
+        var a = document.createElement('a');
+        a.href     = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csvString);
+        a.target   ='_blank';
+        a.download = 'myFile.csv,' + encodeURIComponent(csvString);
+        a.innerHTML = "Click me to download the file.";
+        document.body.appendChild(a);
+
+////        var text = catalogPrimaryImageByPOBU("http://vwsback.walmart.com/servlet/imageurlbyupcservlet", "GET", "0079234331970", "500", "s");
+//          var xmlHttp = null;
+//        xmlHttp = new XMLHttpRequest();
+//        xmlHttp.open( "GET", "http://vwsback.walmart.com/servlet/imageurlbyupcservlet?upc=0079234331970&dim=450&type=s", false );
+////        xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "http://vwsback.walmart.com");
+//        xmlHttp.send(null);
+//
+//        alert( xmlHttp.responseText);
+
+//        var text = catalogPrimaryImageByPOBU("http://vwsback.walmart.com/servlet/imageurlbyupcservlet", "GET", "0079234331970", "500", "s");
+//          var xmlHttp = null;
+//        xmlHttp = new XMLHttpRequest();
+//
+//        xmlHttp.onreadystatechange = function() {
+//            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+//                var myArr = JSON.parse(xmlHttp.responseText);
+//
+//                parseJsonFromAsset(myArr);
+//            }
+//        }
+//        xmlHttp.open( "GET", "http://itemasset.prod.itemasset.catdev.glb.prod.walmart.com/itemasset-setup-app/services/assetgroupsetup/get/PRODUCT/2A42FLMQP04P", false );
+//        xmlHttp.setRequestHeader("Content-Type", "application/json");
+//
+//        xmlHttp.send(null);
+//    }
+//
+//    function parseJsonFromAsset(response) {
+//
+//        var assetURL =null;
+//        var entityList = response.payload.entityAssetList;
+//        var i;
+//        for(i = 0; i< entityList.length; i++) {
+//            if(entityList[i].assetType == "PRIMARY") {
+//                assetURL = entityList[i].assetUrl;
+//                break;
+//            }
+//        }
+//        alert(assetURL);
+//    }
+//
+//        var assetURL = pangeaPrimaryImageByWPID("http://itemasset.prod.itemasset.catdev.glb.prod.walmart.com/itemasset-setup-app/services/assetgroupsetup/get/PRODUCT", "GET", "2A42FLMQP04P");
+//        alert(assetURL);
+    }
+
+</script>
+
+</body>
+</html>

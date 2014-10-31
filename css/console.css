@@ -1,0 +1,121 @@
+
+
+/*     background-color: yellow;
+*/
+
+h1 {
+    text-align: center;
+}
+
+#leftInputBox {
+    position: absolute;
+    left: 200px;
+    float: left;
+}
+
+#rightInputBox {
+    position: relative;
+    left: 900px;
+    float: left;
+
+}
+
+#inputText {
+    clear: both;
+    background-color: lightgray;
+    color: GhostWhite;
+
+}
+
+#sizePerPage {
+    float: left;
+    width: 100px;
+    height: 95px;
+    background-color: lightgray;
+    color: GhostWhite;
+
+}
+
+#submit {
+    float: left;
+    width: 190px;
+    height: 100px;
+}
+
+div.omit {
+    clear: both;
+    font-size: 200%;
+    margin-left: 50px;
+}
+
+#resultPage {
+
+    clear: both;
+
+    position: relative;
+    left: 200px;
+    width: 1100px;
+}
+
+.resultTable {
+    border-spacing: 10px;
+}
+
+#wholeTable {
+    border-spacing: 10px;
+}
+
+.resultRow {
+    margin: 10px;
+}
+
+.resultCol {
+    margin: 10px;
+    width: 500px;
+    height: 600px;
+}
+
+.checkBox {
+
+}
+
+#pagePin{
+
+}
+#previousPage{
+    left: 100px;
+    width: 100px;
+    height: 50px;
+}
+
+#generateReport {
+    position: relative;
+    left: 400px;
+    width: 100px;
+    height: 50px;
+}
+
+#nextPage{
+    position: relative;
+    left: 800px;
+    width: 100px;
+    height: 50px;
+}
+
+#botDiv {
+    position: fixed;
+    top: 700px;
+    left: 100px;
+}
+
+.realCheckBox{
+    position: relative;
+    left: 100px;
+    /* All browsers except webkit*/
+    transform: scale(1.5);
+
+    /* Webkit browsers*/
+    -webkit-transform: scale(1.5);
+}
+
+
